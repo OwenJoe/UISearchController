@@ -1,0 +1,2 @@
+# UISearchController
+在iOS9中，UISearchDisplayController 已经被UISearchController替代。搜索框是一种常用的控件。
