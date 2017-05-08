@@ -77,6 +77,9 @@
     // 添加 searchbar 到 headerview
     self.skTableView.tableHeaderView = self.searchController.searchBar;
     
+    #warning 如果进入预编辑状态,searchBar消失(UISearchController套到TabBarController可能会出现这个情况),请添加下边这句话
+    self.definesPresentationContext=YES;
+    
     [self.view addSubview: self.skTableView];
 }
 
@@ -172,7 +175,7 @@
 - (void)didPresentSearchController:(UISearchController *)searchController
 {
     NSLog(@"didPresentSearchController");
-#warning 如果进入预编辑状态,searchBar消失(UISearchController套到TabBarController可能会出现这个情况),请添加下边这句话
+
 //    [self.view addSubview:self.searchController.searchBar];
 }
 
